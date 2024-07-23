@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "loading.png",
+    "path": "uploads/1-loading.png",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-22T21:10:43.625Z"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "gaurav's resume",
+    "path": "uploads/3-gauravjadhavcv.pdf",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-22T21:15:42.586Z"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "stock-police-officer-photo.webp",
+    "path": "uploads/4-stock-police-officer-photo.webp",
+    "owner": "nileshJadhavar@gmail.com",
+    "sharedWith": [
+      {
+        "email": "gauravjadhav22@gmail.com",
+        "permission": "read"
+      }
+    ],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "nileshJadhavar@gmail.com",
+        "timestamp": "2024-07-22T21:29:45.400Z"
+      }
+    ]
+  },
+  {
+    "id": "4e3c49e8-6382-4e38-8547-1fe02a5a9563",
+    "name": "stock-police-officer-photo.webp",
+    "path": "uploads/4e3c49e8-6382-4e38-8547-1fe02a5a9563-stock-police-officer-photo.webp",
+    "owner": "nileshJadhavar@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "nileshJadhavar@gmail.com",
+        "timestamp": "2024-07-22T21:30:47.684Z"
+      }
+    ]
+  },
+  {
+    "id": "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
+    "name": "stock-police-officer-photo.webp",
+    "path": "uploads/7fa53ac2-6f0c-4d1f-a580-de024b34cace-stock-police-officer-photo.webp",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-23T19:39:27.106Z"
+      }
+    ]
+  },
+  {
+    "id": "e2cd0c49-e94d-4b16-ad54-88910bf7133f",
+    "name": "cop.jpeg",
+    "path": "uploads/e2cd0c49-e94d-4b16-ad54-88910bf7133f-cop.jpeg",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-23T19:39:53.147Z"
+      }
+    ]
+  },
+  {
+    "id": "d65b9767-ae00-4acc-89db-5abbf591ca54",
+    "name": "loading.png",
+    "path": "uploads/d65b9767-ae00-4acc-89db-5abbf591ca54-loading.png",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-23T20:55:52.425Z"
+      }
+    ]
+  }
+]

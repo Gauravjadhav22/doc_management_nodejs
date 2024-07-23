@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "myFolder",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "4e3c49e8-6382-4e38-8547-1fe02a5a9563",
+      "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
+      "e2cd0c49-e94d-4b16-ad54-88910bf7133f"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "nileshFolder",
+    "owner": "nileshJadhavar@gmail.com",
+    "documents": []
+  },
+  {
+    "id": "232ed0a2-67d0-4849-ae0f-be483a0a1842",
+    "name": "nileshFolder",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": [
+      "d65b9767-ae00-4acc-89db-5abbf591ca54"
+    ]
+  },
+  {
+    "id": "7b3f53d2-5828-42c7-8946-23ed5987698e",
+    "name": "gaurav'Folder",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": []
+  },
+  {
+    "id": "256b3ecd-e5f0-46c7-91d3-432d7b7a9d64",
+    "name": "new3",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": []
+  }
+]
