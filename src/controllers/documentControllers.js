@@ -69,7 +69,7 @@ const getDocumentByIdController = (req, res) => {
   }
   if (
     document.owner !== req?.user?.email &&
-    !document.sharedWith.includes(req?.user?.email)
+    !document.sharedWith.some((itm) => itm.email === req?.user?.email)
   ) {
     return res.status(403).json({ message: "you dont have access" });
   }
@@ -144,9 +144,13 @@ const shareDocumentController = (req, res) => {
       .status(404)
       .json({ message: "Document not found or unauthorized" });
   }
-  document.owner = email;
+  // document.owner = email;
   const newDocs = folder.documents.filter((itm) => itm?.id !== document?.id);
   newDocs.push(document);
+  if (!document.sharedWith) {
+    document.sharedWith = [];
+  }
+  document.sharedWith.push({ email, permission });
   folder.documents = newDocs;
   writeDataToFile(documentsFile, documents);
   writeDataToFile(foldersFile, folders);

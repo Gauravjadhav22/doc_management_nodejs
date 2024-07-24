@@ -34,20 +34,21 @@ const getFolderByIdController = (req, res) => {
       folder.id === req.params.id?.replace("%", " ") &&
       folder.owner === req?.user?.email
   );
-  console.log(folder);
   if (!folder) {
     return res.status(404).json({ message: "Folder not found" });
   }
-  if (!folder.documents?.length) {
-    const documents = folder.documents
-      .map((itemId) =>
-        documentsfiles.find(
-          (itm) => itm.id === itemId && itm.owner === req?.user?.email
-        )
+  // if (!folder.documents?.length) {
+  const documents = folder.documents
+    .map((itemId) =>
+      documentsfiles.find(
+        (itm) =>
+          (itm.id === itemId && itm.owner === req?.user?.email) ||
+          itm.sharedWith.some((itm) => itm.email === req?.user?.email)
       )
-      .filter((itm) => itm != null);
-    folder.documents = documents;
-  }
+    )
+    .filter((itm) => itm != null);
+  folder.documents = documents;
+  // }
 
   res.json(folder);
 };

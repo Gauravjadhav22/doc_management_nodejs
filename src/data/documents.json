@@ -3,7 +3,7 @@
     "id": "4",
     "name": "stock-police-officer-photo.webp",
     "path": "uploads/4-stock-police-officer-photo.webp",
-    "owner": "nileshJadhavar@gmail.com",
+    "owner": "gauravjadhav22@gmail.com",
     "sharedWith": [
       {
         "email": "gauravjadhav22@gmail.com",
@@ -23,7 +23,7 @@
     "id": "4e3c49e8-6382-4e38-8547-1fe02a5a9563",
     "name": "stock-police-officer-photo.webp",
     "path": "uploads/4e3c49e8-6382-4e38-8547-1fe02a5a9563-stock-police-officer-photo.webp",
-    "owner": "nileshJadhavar@gmail.com",
+    "owner": "gauravjadhav22@gmail.com",
     "sharedWith": [],
     "version": 1,
     "activityLog": [
@@ -38,7 +38,7 @@
     "id": "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
     "name": "stock-police-officer-photo.webp",
     "path": "uploads/7fa53ac2-6f0c-4d1f-a580-de024b34cace-stock-police-officer-photo.webp",
-    "owner": "gauravjadhav22@gmail.com",
+    "owner": "nileshJadhavar@gmail.com",
     "sharedWith": [],
     "version": 1,
     "activityLog": [
@@ -72,9 +72,13 @@
     "id": "cc6f9e74-0389-4bac-a215-1ef23316f5c1",
     "name": "newGauravJadhav_cv.pdf",
     "path": "uploads/cc6f9e74-0389-4bac-a215-1ef23316f5c1-newGauravJadhav_cv.pdf",
-    "owner": "nileshJadhavar@gmail.com",
+    "owner": "gauravjadhav22@gmail.com",
     "sharedWith": [
       {
+        "permission": "read"
+      },
+      {
+        "email": "nileshJadhavar@gmail.com",
         "permission": "read"
       }
     ],
@@ -133,6 +137,21 @@
         "action": "uploaded",
         "user": "gauravjadhav22@gmail.com",
         "timestamp": "2024-07-24T07:47:46.988Z"
+      }
+    ]
+  },
+  {
+    "id": "260fdb1f-515a-4d1a-b2e1-fb16a4c21512",
+    "name": "police-2803371_640.webp",
+    "path": "uploads/260fdb1f-515a-4d1a-b2e1-fb16a4c21512-police-2803371_640.webp",
+    "owner": "gauravjadhav22@gmail.com",
+    "sharedWith": [],
+    "version": 1,
+    "activityLog": [
+      {
+        "action": "uploaded",
+        "user": "gauravjadhav22@gmail.com",
+        "timestamp": "2024-07-24T12:30:53.314Z"
       }
     ]
   }
