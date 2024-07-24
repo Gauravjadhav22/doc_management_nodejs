@@ -28,29 +28,34 @@ const getFoldersController = (req, res) => {
 const getFolderByIdController = (req, res) => {
   const folders = readDataFromFile(foldersFile);
   const documentsfiles = readDataFromFile(docsFile);
+  console.log(req.params.id?.replace("%", " "));
   const folder = folders.find(
     (folder) =>
-      folder.id === req.params.id && folder.owner === req?.user?.email
+      folder.id === req.params.id?.replace("%", " ") &&
+      folder.owner === req?.user?.email
   );
-  
+  console.log(folder);
   if (!folder) {
     return res.status(404).json({ message: "Folder not found" });
   }
-  
-  const documents = folder.documents.map((itemId) => 
-    documentsfiles.find((itm) => itm.id === itemId)
-  ).filter(itm=>itm!=null);
-  
-  folder.documents = documents;
-  
+  if (!folder.documents?.length) {
+    const documents = folder.documents
+      .map((itemId) =>
+        documentsfiles.find(
+          (itm) => itm.id === itemId && itm.owner === req?.user?.email
+        )
+      )
+      .filter((itm) => itm != null);
+    folder.documents = documents;
+  }
+
   res.json(folder);
 };
 
 const deleteFolderController = (req, res) => {
   let folders = readDataFromFile(foldersFile);
   const index = folders.findIndex(
-    (folder) =>
-      folder.id === req.params.id && folder.owner === req?.user?.email
+    (folder) => folder.id === req.params.id && folder.owner === req?.user?.email
   );
   if (index === -1)
     return res
@@ -65,8 +70,7 @@ const updateFolderController = (req, res) => {
   const folders = readDataFromFile(foldersFile);
   const { name } = req.body;
   const folder = folders.find(
-    (folder) =>
-      folder.id === req.params.id && folder.owner === req?.user?.email
+    (folder) => folder.id === req.params.id && folder.owner === req?.user?.email
   );
   if (!folder)
     return res

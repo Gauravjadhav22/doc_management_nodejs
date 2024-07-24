@@ -10,7 +10,10 @@
       "4",
       "4e3c49e8-6382-4e38-8547-1fe02a5a9563",
       "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
-      "e2cd0c49-e94d-4b16-ad54-88910bf7133f"
+      "e2cd0c49-e94d-4b16-ad54-88910bf7133f",
+      "cc6f9e74-0389-4bac-a215-1ef23316f5c1",
+      "134ba3ea-50b2-4b6b-b120-8dbf85ae9c93",
+      "12b7a5b5-95da-485e-b64d-7c8af07a6528"
     ]
   },
   {
@@ -24,19 +27,88 @@
     "name": "nileshFolder",
     "owner": "gauravjadhav22@gmail.com",
     "documents": [
-      "d65b9767-ae00-4acc-89db-5abbf591ca54"
+      "d65b9767-ae00-4acc-89db-5abbf591ca54",
+      "9dbb0444-efc4-49f3-b106-40ed5c4f2602"
     ]
-  },
-  {
-    "id": "7b3f53d2-5828-42c7-8946-23ed5987698e",
-    "name": "gaurav'Folder",
-    "owner": "gauravjadhav22@gmail.com",
-    "documents": []
   },
   {
     "id": "256b3ecd-e5f0-46c7-91d3-432d7b7a9d64",
     "name": "new3",
     "owner": "gauravjadhav22@gmail.com",
     "documents": []
+  },
+  {
+    "id": "e17ee3b4-9d78-4f31-ad4a-07a7ff34027e",
+    "name": "newone",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": []
+  },
+  {
+    "id": "f374c25a-a8b0-4930-9d39-2d2ada37c0dd",
+    "name": "newone",
+    "owner": "gauravjadhav22@gmail.com",
+    "documents": []
+  },
+  {
+    "id": "Shared Folderundefined",
+    "name": "Shared Folder",
+    "documents": [
+      {
+        "id": "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
+        "name": "stock-police-officer-photo.webp",
+        "path": "uploads/7fa53ac2-6f0c-4d1f-a580-de024b34cace-stock-police-officer-photo.webp",
+        "owner": "gauravjadhav22@gmail.com",
+        "sharedWith": [],
+        "version": 1,
+        "activityLog": [
+          {
+            "action": "uploaded",
+            "user": "gauravjadhav22@gmail.com",
+            "timestamp": "2024-07-23T19:39:27.106Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Shared FoldernileshJadhavar@gmail.com",
+    "name": "Shared Folder",
+    "owner": "nileshJadhavar@gmail.com",
+    "documents": [
+      {
+        "id": "7fa53ac2-6f0c-4d1f-a580-de024b34cace",
+        "name": "stock-police-officer-photo.webp",
+        "path": "uploads/7fa53ac2-6f0c-4d1f-a580-de024b34cace-stock-police-officer-photo.webp",
+        "owner": "gauravjadhav22@gmail.com",
+        "sharedWith": [],
+        "version": 1,
+        "activityLog": [
+          {
+            "action": "uploaded",
+            "user": "gauravjadhav22@gmail.com",
+            "timestamp": "2024-07-23T19:39:27.106Z"
+          }
+        ]
+      },
+      {
+        "id": "cc6f9e74-0389-4bac-a215-1ef23316f5c1",
+        "name": "newGauravJadhav_cv.pdf",
+        "path": "uploads/cc6f9e74-0389-4bac-a215-1ef23316f5c1-newGauravJadhav_cv.pdf",
+        "owner": "nileshJadhavar@gmail.com",
+        "sharedWith": [
+          {
+            "permission": "read"
+          }
+        ],
+        "version": 1,
+        "activityLog": [
+          {
+            "action": "uploaded",
+            "user": "gauravjadhav22@gmail.com",
+            "timestamp": "2024-07-23T22:43:41.323Z"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -53,9 +53,9 @@ const uploadDocumentController = (req, res) => {
 const getDocumentsController = (req, res) => {
   const documents = readDataFromFile(documentsFile);
   const userDocuments = documents.filter(
-    (doc) =>
-      doc.owner == req?.user?.email ||
-      doc.sharedWith.some((itm) => itm.email === req?.user?.email)
+    (doc) => doc.owner == req?.user?.email
+    // ||
+    // doc.sharedWith.some((itm) => itm.email === req?.user?.email)
   );
   res.json(userDocuments);
 };
@@ -63,12 +63,15 @@ const getDocumentsController = (req, res) => {
 const getDocumentByIdController = (req, res) => {
   const documents = readDataFromFile(documentsFile);
   const document = documents.find((doc) => doc.id === req.params.id);
-  if (
-    !document ||
-    (document.owner !== req?.user?.email &&
-      !document.sharedWith.includes(req?.user?.email))
-  ) {
+  console.log(document, document.owner, req?.user?.email);
+  if (!document) {
     return res.status(404).json({ message: "Document not found" });
+  }
+  if (
+    document.owner !== req?.user?.email &&
+    !document.sharedWith.includes(req?.user?.email)
+  ) {
+    return res.status(403).json({ message: "you dont have access" });
   }
 
   // Send the file as a downloadable response
@@ -81,13 +84,17 @@ const getDocumentByIdController = (req, res) => {
 
 const deleteDocumentController = (req, res) => {
   let documents = readDataFromFile(documentsFile);
-  const index = documents.findIndex(
-    (doc) => doc.id === req.params.id && doc.owner === req?.user?.email
-  );
-  if (index === -1)
+  const index = documents.findIndex((doc) => doc.id === req.params.id);
+  if (index === -1) {
     return res
       .status(404)
       .json({ message: "Document not found or unauthorized" });
+  }
+  if (documents[index]?.id && documents[index].owner === req?.user?.email) {
+    return res
+      .status(406)
+      .json({ message: "You Dont have permission to delete" });
+  }
 
   const document = documents[index];
 
@@ -113,20 +120,41 @@ const updateDocumentController = (req, res) => {
   writeDataToFile(documentsFile, documents);
   res.json(document);
 };
-
 const shareDocumentController = (req, res) => {
-  const documents = readDataFromFile(documentsFile);
   const { email, permission } = req.body;
+
+  const documents = readDataFromFile(documentsFile);
+  let folders = readDataFromFile(foldersFile);
+
+  let folder = folders.find((itm) => itm.id === "Shared Folder" + email);
+
+  if (!folder) {
+    folder = {
+      id: "Shared Folder" + email,
+      name: "Shared Folder",
+      owner: email,
+      documents: [],
+    };
+    folders.push(folder);
+  }
+
   const document = documents.find((doc) => doc.id === req.params.id);
   if (!document || document.owner !== req?.user?.email) {
     return res
       .status(404)
       .json({ message: "Document not found or unauthorized" });
   }
-  document.sharedWith.push({ email, permission });
+  document.owner = email;
+  const newDocs = folder.documents.filter((itm) => itm?.id !== document?.id);
+  newDocs.push(document);
+  folder.documents = newDocs;
   writeDataToFile(documentsFile, documents);
+  writeDataToFile(foldersFile, folders);
+
   res.json({ message: "Document shared" });
 };
+
+module.exports = shareDocumentController;
 
 module.exports = {
   uploadDocumentController,

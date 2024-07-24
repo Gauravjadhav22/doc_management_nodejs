@@ -3,6 +3,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { readDataFromFile, writeDataToFile } = require("../utils/fileHandler");
+const { authenticateToken } = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
@@ -36,6 +37,13 @@ router.post("/login", async (req, res) => {
   }
   const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: '2d' } );
   res.json({ token, data: user });
+});
+router.get("/users", authenticateToken, async (req, res) => {
+  const users = readDataFromFile(usersFile);
+  const user = users.find((u) => u.email === req?.user?.email);
+  const filteredUsers = users.filter((u) => u.email !== user.email);
+
+  res.json(filteredUsers);
 });
 
 module.exports = router;
